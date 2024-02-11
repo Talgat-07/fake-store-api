@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  font-family: Poppins, serif;
+  padding-bottom: 100px;
+}
+
+.container {
+  width: 900px;
+  margin: auto;
+  max-width: 90vw;
+  text-align: center;
+  padding-top: 10px;
+  transition: transform 0.5s;
+}
+
+svg {
+  width: 30px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.icon-cart {
+  position: relative;
+}
+
+.icon-cart span {
+  position: absolute;
+  background-color: red;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #fff;
+  top: 50%;
+  right: -20px;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.item-input {
+  display: none;
+}
+
+.item-input-open {
+  display: block !important;
+}
+
+.buttonChangeInput {
+  width: 175px;
+  height: 25px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.buttonChangeInput-open {
+  display: block !important;
+}
+
+.listProducts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.listProducts .item img {
+  width: 90%;
+  filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProducts .item {
+  background-color: #eeeee6;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.listProducts .item h2 {
+  font-weight: 500;
+  font-size: large;
+}
+
+.listProducts .item .price {
+  letter-spacing: 7px;
+  font-size: small;
+}
+
+.listProducts .item button {
+  background-color: #353432;
+  color: #eee;
+  border: none;
+  padding: 5px 10px;
+  margin-top: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.cartTab {
+  width: 400px;
+  background-color: #353432;
+  color: #eee;
+  position: fixed;
+  top: 0;
+  right: -440px;
+  bottom: 0;
+  display: grid;
+  grid-template-rows: 70px 1fr 70px;
+  transition: 0.5s;
+}
+
+body.showCart .cartTab {
+  right: 0;
+}
+
+body.showCart .container {
+  transform: translateX(-250px);
+}
+
+.cartTab h1 {
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+}
+
+.cartTab .btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab button {
+  background-color: #e8bc0e;
+  border: none;
+  font-family: Poppins, serif;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cartTab .close {
+  background-color: #eee;
+}
+
+.listCart .item img {
+  width: 100%;
+}
+
+.listCart .item {
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.listCart .quantity span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #eee;
+  border-radius: 50%;
+  color: #555;
+  cursor: pointer;
+}
+
+.listCart .quantity span:nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+  cursor: default;
+}
+
+.listCart {
+  overflow: auto;
+}
+
+.listCart .item:nth-child(even) {
+  background-color: #eee1;
+}
+
+.listItemChange {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #00000080;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.listItemChangeHTML-open {
+  display: flex;
+}
+.itemChange {
+  width: 600px;
+  height: 700px;
+  background-color: #eeeee6;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.itemChange-e1 {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itemChange-e1 img {
+  width: 250px;
+  filter: drop-shadow(0 50px 20px #0009);
+}
+
+.itemChange-e1 .labelImg {
+  background-color: #353432;
+  padding: 5px 10px;
+  margin-top: -45px;
+  margin-bottom: 40px;
+  color: #eee;
+  border-radius:  50px;
+  font-size: 1.5em;
+  position: relative;
+  z-index: 15;
+  cursor: pointer;
+}
+
+#itemChangeImgId {
+  display: none;
+}
+
+.itemChange-e1 input {
+  margin: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.itemChange-e1 label {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.itemChange-e2 {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.itemChange-e2 button {
+  background-color: #353432;
+  color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.filterDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 60px;
+}
+.buttonPagination {
+  width: 35px;
+  cursor: pointer;
+  background-color: #555;
+  border-radius: 50%;
+  color: #eee;
+  font-size: 1.5em;
+}
+
+.filterPriceForm input[type="number"] {
+ width: 80px;
+ padding-left: 10px;
+}
+.like {
+  cursor: pointer;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
+}
